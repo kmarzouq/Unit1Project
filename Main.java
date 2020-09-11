@@ -94,9 +94,9 @@ public class Main {
 	    return energyChange;
 	}
 	public static double tempChangeLiquid(double mass,double startTemp, double endTemp,String endPhase, boolean endothermic){
-	    if(!endPhase.equals("solid"))
+	    if(endPhase.equals("solid"))
 	        endTemp = 0;
-	    if(!endPhase.equals("vapor"))
+	    if(endPhase.equals("vapor"))
 	        endTemp = 100;
 	    double energyChange = round(mass*0.004184*(endTemp - startTemp));
 	    if(endothermic)
